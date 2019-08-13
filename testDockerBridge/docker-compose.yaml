@@ -1,0 +1,18 @@
+version: '3'
+services:
+  test1:
+    build: .
+    ports:
+    - "8081:8080"
+    networks:
+      - test
+  test2:
+    build: .
+    ports:
+    - "8082:8080"
+    networks:
+      - test
+
+networks:
+  test:
+    driver: bridge
